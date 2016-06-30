@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=" #00f28f" />
+
+  <title>Project001</title>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+<div id="wrapper">
+    <input type="file" id="files" name="files[]" multiple />
+</div>
+
+  <div id="imageBox" class="col-md-6 box"><output id="list"></output></div>
+
+  <div id="optionsBox" class="col-md-6 box">
+
+  <form xmlns="http://www.w3.org/1999/xhtml" id="options">
+    <label>Encoding password:</br><input type="password" class="filename" id="option-password" placeholder="Enter your password" maxlength="20"/></label>
+    <label>Filename:</br><input type="text" class="filename" id="option-filename" placeholder="encodedImage" />.png</label></br>
+    <input type="button" id="previewLog" value="Preview" />
+    <input type="button" id="invertbtn" value="Encrypt" />
+    <input type="submit" value="Encode &amp; Save" />
+    <input type="checkbox" id="cbox_01" /><label for="cbox_01">Revert</label> 
+  </form>
+
+</div>
+
+<div id="processBox" class="box">
+
+<canvas id="canvas" width="500" height="500" display="none">
+</canvas>
+
+</div>
+
+    <script scr='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type='application/ecmascript' async src='https://rawgit.com/eligrey/FileSaver.js/master/FileSaver.js'></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
